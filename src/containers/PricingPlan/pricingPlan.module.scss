@@ -1,0 +1,106 @@
+@import '../../styles/variables';
+
+.container{
+    font-family: $poppins_regular;
+
+    .heading{
+        margin: 0;
+        text-align: center;
+        font-size: 30px;
+        color: $tarcoal;
+        font-family: $poppins_regular;
+        margin-bottom: 15px;
+        @media(max-width:768px){
+            font-size: 25px;
+        }
+    }
+    .tabs{
+        >div>div{
+            justify-content: center;
+            background-color: $tarcoal;
+            @media(max-width:768px) {
+                flex-direction: column;
+            }
+        } 
+        >div>span{
+            background-color: transparent;
+        }
+        .tab{
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            text-transform: capitalize;
+            border: 3px solid transparent;
+            font-family: $poppins_regular;
+            @media(max-width:768px) {
+                width: 100%;
+                max-width: 768px;
+            }
+        }
+        .active {
+            border-bottom: 3px solid $tarcoal;
+            background-color: $yellow;
+            color: $tarcoal;
+
+        }
+    }
+
+    .pricing_details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .tab_heading{
+            font-size: 18px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .tab_btn{
+            font-size: 18px;
+            font-weight: 500;
+            color: $tarcoal;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 20px;
+            border: 2px solid $tarcoal;
+            background-color: #fff;
+        }
+
+        .plan_details{
+
+            .plan{
+                background-color: #fff;
+                border: 1px solid #000;
+                border-radius: 20px;
+                padding: 25px 10px;
+                margin-bottom: 20px;
+
+                .plan_heading{
+                    font-size: 24px;
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .ul{
+                    padding-left: 10px;
+                    li{
+                        list-style-type: none;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+            
+                        .li_icon{
+                            color: $yellow;
+                            font-size: 25px;
+                            align-self: flex-start;
+                        }
+                    }
+                    @media (max-width:768px) {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
